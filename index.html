@@ -34,12 +34,12 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/AirportRunway_0.js"></script>
-        <script src="data/AirportRunwayAirportRunwayLines_1.js"></script>
-        <script src="data/PlannedPitsEagle2January2022_4.js"></script>
-        <script src="data/PlannedPitsEagle1January2022_5.js"></script>
-        <script src="data/PlannedPitsBlair2January2022_6.js"></script>
-        <script src="data/AirportRegrade5ftContours_7.js"></script>
+        <script src="data/PlannedPitsEagle2January2022_2.js"></script>
+        <script src="data/PlannedPitsEagle1January2022_3.js"></script>
+        <script src="data/PlannedPitsBlair2January2022_4.js"></script>
+        <script src="data/AirportRegrade5ftContours_5.js"></script>
+        <script src="data/AirportRunwayAirportRunwayLines_6.js"></script>
+        <script src="data/AirportRunwayAirportRunway_7.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -58,7 +58,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:19, minZoom:1
-        }).fitBounds([[37.225355545507135,-82.13386911261013],[37.24274122703038,-82.10304174045787]]);
+        }).fitBounds([[37.22516593412023,-82.13517255672741],[37.242551939397245,-82.1043449932894]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -78,86 +78,10 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_AirportRunway_0(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-        }
-
-        function style_AirportRunway_0_0() {
-            return {
-                pane: 'pane_AirportRunway_0',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_AirportRunway_0');
-        map.getPane('pane_AirportRunway_0').style.zIndex = 400;
-        map.getPane('pane_AirportRunway_0').style['mix-blend-mode'] = 'normal';
-        var layer_AirportRunway_0 = new L.geoJson(json_AirportRunway_0, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_AirportRunway_0',
-            layerName: 'layer_AirportRunway_0',
-            pane: 'pane_AirportRunway_0',
-            onEachFeature: pop_AirportRunway_0,
-            style: style_AirportRunway_0_0,
-        });
-        bounds_group.addLayer(layer_AirportRunway_0);
-        map.addLayer(layer_AirportRunway_0);
-        function pop_AirportRunwayAirportRunwayLines_1(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-        }
-
-        function style_AirportRunwayAirportRunwayLines_1_0() {
-            return {
-                pane: 'pane_AirportRunwayAirportRunwayLines_1',
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_AirportRunwayAirportRunwayLines_1');
-        map.getPane('pane_AirportRunwayAirportRunwayLines_1').style.zIndex = 401;
-        map.getPane('pane_AirportRunwayAirportRunwayLines_1').style['mix-blend-mode'] = 'normal';
-        var layer_AirportRunwayAirportRunwayLines_1 = new L.geoJson(json_AirportRunwayAirportRunwayLines_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_AirportRunwayAirportRunwayLines_1',
-            layerName: 'layer_AirportRunwayAirportRunwayLines_1',
-            pane: 'pane_AirportRunwayAirportRunwayLines_1',
-            onEachFeature: pop_AirportRunwayAirportRunwayLines_1,
-            style: style_AirportRunwayAirportRunwayLines_1_0,
-        });
-        bounds_group.addLayer(layer_AirportRunwayAirportRunwayLines_1);
-        map.addLayer(layer_AirportRunwayAirportRunwayLines_1);
-        map.createPane('pane_GoogleHybrid_2');
-        map.getPane('pane_GoogleHybrid_2').style.zIndex = 402;
-        var layer_GoogleHybrid_2 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleHybrid_2',
+        map.createPane('pane_GoogleHybrid_0');
+        map.getPane('pane_GoogleHybrid_0').style.zIndex = 400;
+        var layer_GoogleHybrid_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleHybrid_0',
             opacity: 1.0,
             attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
             minZoom: 1,
@@ -165,18 +89,18 @@
             minNativeZoom: 0,
             maxNativeZoom: 20
         });
-        layer_GoogleHybrid_2;
-        map.addLayer(layer_GoogleHybrid_2);
-        map.createPane('pane_Airport123021_3');
-        map.getPane('pane_Airport123021_3').style.zIndex = 403;
-        var img_Airport123021_3 = 'data/Airport123021_3.png';
-        var img_bounds_Airport123021_3 = [[37.225814987837246,-82.13165914940596],[37.242282284621155,-82.10525113418355]];
-        var layer_Airport123021_3 = new L.imageOverlay(img_Airport123021_3,
-                                              img_bounds_Airport123021_3,
-                                              {pane: 'pane_Airport123021_3'});
-        bounds_group.addLayer(layer_Airport123021_3);
-        map.addLayer(layer_Airport123021_3);
-        function pop_PlannedPitsEagle2January2022_4(feature, layer) {
+        layer_GoogleHybrid_0;
+        map.addLayer(layer_GoogleHybrid_0);
+        map.createPane('pane_Airport123021_1');
+        map.getPane('pane_Airport123021_1').style.zIndex = 401;
+        var img_Airport123021_1 = 'data/Airport123021_1.png';
+        var img_bounds_Airport123021_1 = [[37.225814987837246,-82.13165914940596],[37.242282284621155,-82.10525113418355]];
+        var layer_Airport123021_1 = new L.imageOverlay(img_Airport123021_1,
+                                              img_bounds_Airport123021_1,
+                                              {pane: 'pane_Airport123021_1'});
+        bounds_group.addLayer(layer_Airport123021_1);
+        map.addLayer(layer_Airport123021_1);
+        function pop_PlannedPitsEagle2January2022_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -196,9 +120,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_PlannedPitsEagle2January2022_4_0() {
+        function style_PlannedPitsEagle2January2022_2_0() {
             return {
-                pane: 'pane_PlannedPitsEagle2January2022_4',
+                pane: 'pane_PlannedPitsEagle2January2022_2',
                 opacity: 1,
                 color: 'rgba(0,13,255,1.0)',
                 dashArray: '',
@@ -209,21 +133,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PlannedPitsEagle2January2022_4');
-        map.getPane('pane_PlannedPitsEagle2January2022_4').style.zIndex = 404;
-        map.getPane('pane_PlannedPitsEagle2January2022_4').style['mix-blend-mode'] = 'normal';
-        var layer_PlannedPitsEagle2January2022_4 = new L.geoJson(json_PlannedPitsEagle2January2022_4, {
+        map.createPane('pane_PlannedPitsEagle2January2022_2');
+        map.getPane('pane_PlannedPitsEagle2January2022_2').style.zIndex = 402;
+        map.getPane('pane_PlannedPitsEagle2January2022_2').style['mix-blend-mode'] = 'normal';
+        var layer_PlannedPitsEagle2January2022_2 = new L.geoJson(json_PlannedPitsEagle2January2022_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PlannedPitsEagle2January2022_4',
-            layerName: 'layer_PlannedPitsEagle2January2022_4',
-            pane: 'pane_PlannedPitsEagle2January2022_4',
-            onEachFeature: pop_PlannedPitsEagle2January2022_4,
-            style: style_PlannedPitsEagle2January2022_4_0,
+            dataVar: 'json_PlannedPitsEagle2January2022_2',
+            layerName: 'layer_PlannedPitsEagle2January2022_2',
+            pane: 'pane_PlannedPitsEagle2January2022_2',
+            onEachFeature: pop_PlannedPitsEagle2January2022_2,
+            style: style_PlannedPitsEagle2January2022_2_0,
         });
-        bounds_group.addLayer(layer_PlannedPitsEagle2January2022_4);
-        map.addLayer(layer_PlannedPitsEagle2January2022_4);
-        function pop_PlannedPitsEagle1January2022_5(feature, layer) {
+        bounds_group.addLayer(layer_PlannedPitsEagle2January2022_2);
+        map.addLayer(layer_PlannedPitsEagle2January2022_2);
+        function pop_PlannedPitsEagle1January2022_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -243,9 +167,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_PlannedPitsEagle1January2022_5_0() {
+        function style_PlannedPitsEagle1January2022_3_0() {
             return {
-                pane: 'pane_PlannedPitsEagle1January2022_5',
+                pane: 'pane_PlannedPitsEagle1January2022_3',
                 opacity: 1,
                 color: 'rgba(0,247,255,1.0)',
                 dashArray: '',
@@ -256,21 +180,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PlannedPitsEagle1January2022_5');
-        map.getPane('pane_PlannedPitsEagle1January2022_5').style.zIndex = 405;
-        map.getPane('pane_PlannedPitsEagle1January2022_5').style['mix-blend-mode'] = 'normal';
-        var layer_PlannedPitsEagle1January2022_5 = new L.geoJson(json_PlannedPitsEagle1January2022_5, {
+        map.createPane('pane_PlannedPitsEagle1January2022_3');
+        map.getPane('pane_PlannedPitsEagle1January2022_3').style.zIndex = 403;
+        map.getPane('pane_PlannedPitsEagle1January2022_3').style['mix-blend-mode'] = 'normal';
+        var layer_PlannedPitsEagle1January2022_3 = new L.geoJson(json_PlannedPitsEagle1January2022_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PlannedPitsEagle1January2022_5',
-            layerName: 'layer_PlannedPitsEagle1January2022_5',
-            pane: 'pane_PlannedPitsEagle1January2022_5',
-            onEachFeature: pop_PlannedPitsEagle1January2022_5,
-            style: style_PlannedPitsEagle1January2022_5_0,
+            dataVar: 'json_PlannedPitsEagle1January2022_3',
+            layerName: 'layer_PlannedPitsEagle1January2022_3',
+            pane: 'pane_PlannedPitsEagle1January2022_3',
+            onEachFeature: pop_PlannedPitsEagle1January2022_3,
+            style: style_PlannedPitsEagle1January2022_3_0,
         });
-        bounds_group.addLayer(layer_PlannedPitsEagle1January2022_5);
-        map.addLayer(layer_PlannedPitsEagle1January2022_5);
-        function pop_PlannedPitsBlair2January2022_6(feature, layer) {
+        bounds_group.addLayer(layer_PlannedPitsEagle1January2022_3);
+        map.addLayer(layer_PlannedPitsEagle1January2022_3);
+        function pop_PlannedPitsBlair2January2022_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -290,9 +214,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_PlannedPitsBlair2January2022_6_0() {
+        function style_PlannedPitsBlair2January2022_4_0() {
             return {
-                pane: 'pane_PlannedPitsBlair2January2022_6',
+                pane: 'pane_PlannedPitsBlair2January2022_4',
                 opacity: 1,
                 color: 'rgba(0,98,13,1.0)',
                 dashArray: '',
@@ -303,21 +227,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PlannedPitsBlair2January2022_6');
-        map.getPane('pane_PlannedPitsBlair2January2022_6').style.zIndex = 406;
-        map.getPane('pane_PlannedPitsBlair2January2022_6').style['mix-blend-mode'] = 'normal';
-        var layer_PlannedPitsBlair2January2022_6 = new L.geoJson(json_PlannedPitsBlair2January2022_6, {
+        map.createPane('pane_PlannedPitsBlair2January2022_4');
+        map.getPane('pane_PlannedPitsBlair2January2022_4').style.zIndex = 404;
+        map.getPane('pane_PlannedPitsBlair2January2022_4').style['mix-blend-mode'] = 'normal';
+        var layer_PlannedPitsBlair2January2022_4 = new L.geoJson(json_PlannedPitsBlair2January2022_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PlannedPitsBlair2January2022_6',
-            layerName: 'layer_PlannedPitsBlair2January2022_6',
-            pane: 'pane_PlannedPitsBlair2January2022_6',
-            onEachFeature: pop_PlannedPitsBlair2January2022_6,
-            style: style_PlannedPitsBlair2January2022_6_0,
+            dataVar: 'json_PlannedPitsBlair2January2022_4',
+            layerName: 'layer_PlannedPitsBlair2January2022_4',
+            pane: 'pane_PlannedPitsBlair2January2022_4',
+            onEachFeature: pop_PlannedPitsBlair2January2022_4,
+            style: style_PlannedPitsBlair2January2022_4_0,
         });
-        bounds_group.addLayer(layer_PlannedPitsBlair2January2022_6);
-        map.addLayer(layer_PlannedPitsBlair2January2022_6);
-        function pop_AirportRegrade5ftContours_7(feature, layer) {
+        bounds_group.addLayer(layer_PlannedPitsBlair2January2022_4);
+        map.addLayer(layer_PlannedPitsBlair2January2022_4);
+        function pop_AirportRegrade5ftContours_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -337,9 +261,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_AirportRegrade5ftContours_7_0() {
+        function style_AirportRegrade5ftContours_5_0() {
             return {
-                pane: 'pane_AirportRegrade5ftContours_7',
+                pane: 'pane_AirportRegrade5ftContours_5',
                 opacity: 1,
                 color: 'rgba(242,0,255,1.0)',
                 dashArray: '',
@@ -350,20 +274,120 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_AirportRegrade5ftContours_7');
-        map.getPane('pane_AirportRegrade5ftContours_7').style.zIndex = 407;
-        map.getPane('pane_AirportRegrade5ftContours_7').style['mix-blend-mode'] = 'normal';
-        var layer_AirportRegrade5ftContours_7 = new L.geoJson(json_AirportRegrade5ftContours_7, {
+        map.createPane('pane_AirportRegrade5ftContours_5');
+        map.getPane('pane_AirportRegrade5ftContours_5').style.zIndex = 405;
+        map.getPane('pane_AirportRegrade5ftContours_5').style['mix-blend-mode'] = 'normal';
+        var layer_AirportRegrade5ftContours_5 = new L.geoJson(json_AirportRegrade5ftContours_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_AirportRegrade5ftContours_7',
-            layerName: 'layer_AirportRegrade5ftContours_7',
-            pane: 'pane_AirportRegrade5ftContours_7',
-            onEachFeature: pop_AirportRegrade5ftContours_7,
-            style: style_AirportRegrade5ftContours_7_0,
+            dataVar: 'json_AirportRegrade5ftContours_5',
+            layerName: 'layer_AirportRegrade5ftContours_5',
+            pane: 'pane_AirportRegrade5ftContours_5',
+            onEachFeature: pop_AirportRegrade5ftContours_5,
+            style: style_AirportRegrade5ftContours_5_0,
         });
-        bounds_group.addLayer(layer_AirportRegrade5ftContours_7);
-        map.addLayer(layer_AirportRegrade5ftContours_7);
+        bounds_group.addLayer(layer_AirportRegrade5ftContours_5);
+        map.addLayer(layer_AirportRegrade5ftContours_5);
+        function pop_AirportRunwayAirportRunwayLines_6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['description'] !== null ? autolinker.link(feature.properties['description'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_AirportRunwayAirportRunwayLines_6_0() {
+            return {
+                pane: 'pane_AirportRunwayAirportRunwayLines_6',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_AirportRunwayAirportRunwayLines_6');
+        map.getPane('pane_AirportRunwayAirportRunwayLines_6').style.zIndex = 406;
+        map.getPane('pane_AirportRunwayAirportRunwayLines_6').style['mix-blend-mode'] = 'normal';
+        var layer_AirportRunwayAirportRunwayLines_6 = new L.geoJson(json_AirportRunwayAirportRunwayLines_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AirportRunwayAirportRunwayLines_6',
+            layerName: 'layer_AirportRunwayAirportRunwayLines_6',
+            pane: 'pane_AirportRunwayAirportRunwayLines_6',
+            onEachFeature: pop_AirportRunwayAirportRunwayLines_6,
+            style: style_AirportRunwayAirportRunwayLines_6_0,
+        });
+        bounds_group.addLayer(layer_AirportRunwayAirportRunwayLines_6);
+        map.addLayer(layer_AirportRunwayAirportRunwayLines_6);
+        function pop_AirportRunwayAirportRunway_7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['description'] !== null ? autolinker.link(feature.properties['description'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_AirportRunwayAirportRunway_7_0() {
+            return {
+                pane: 'pane_AirportRunwayAirportRunway_7',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_AirportRunwayAirportRunway_7');
+        map.getPane('pane_AirportRunwayAirportRunway_7').style.zIndex = 407;
+        map.getPane('pane_AirportRunwayAirportRunway_7').style['mix-blend-mode'] = 'normal';
+        var layer_AirportRunwayAirportRunway_7 = new L.geoJson(json_AirportRunwayAirportRunway_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AirportRunwayAirportRunway_7',
+            layerName: 'layer_AirportRunwayAirportRunway_7',
+            pane: 'pane_AirportRunwayAirportRunway_7',
+            onEachFeature: pop_AirportRunwayAirportRunway_7,
+            style: style_AirportRunwayAirportRunway_7_0,
+        });
+        bounds_group.addLayer(layer_AirportRunwayAirportRunway_7);
+        map.addLayer(layer_AirportRunwayAirportRunway_7);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -375,7 +399,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/AirportRegrade5ftContours_7.png" /> Airport Regrade 5ft Contours': layer_AirportRegrade5ftContours_7,'<img src="legend/PlannedPitsBlair2January2022_6.png" /> Planned Pits Blair 2 - January 2022': layer_PlannedPitsBlair2January2022_6,'<img src="legend/PlannedPitsEagle1January2022_5.png" /> Planned Pits Eagle 1 - January 2022': layer_PlannedPitsEagle1January2022_5,'<img src="legend/PlannedPitsEagle2January2022_4.png" /> Planned Pits Eagle 2 - January 2022': layer_PlannedPitsEagle2January2022_4,"Airport 12-30-21": layer_Airport123021_3,"Google Hybrid": layer_GoogleHybrid_2,'<img src="legend/AirportRunwayAirportRunwayLines_1.png" /> Airport Runway Airport Runway Lines': layer_AirportRunwayAirportRunwayLines_1,'<img src="legend/AirportRunway_0.png" /> Airport Runway': layer_AirportRunway_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/AirportRunwayAirportRunway_7.png" /> Airport Runway Airport Runway': layer_AirportRunwayAirportRunway_7,'<img src="legend/AirportRunwayAirportRunwayLines_6.png" /> Airport Runway Airport Runway Lines': layer_AirportRunwayAirportRunwayLines_6,'<img src="legend/AirportRegrade5ftContours_5.png" /> Airport Regrade 5ft Contours': layer_AirportRegrade5ftContours_5,'<img src="legend/PlannedPitsBlair2January2022_4.png" /> Planned Pits Blair 2 - January 2022': layer_PlannedPitsBlair2January2022_4,'<img src="legend/PlannedPitsEagle1January2022_3.png" /> Planned Pits Eagle 1 - January 2022': layer_PlannedPitsEagle1January2022_3,'<img src="legend/PlannedPitsEagle2January2022_2.png" /> Planned Pits Eagle 2 - January 2022': layer_PlannedPitsEagle2January2022_2,"Airport 12-30-21": layer_Airport123021_1,"Google Hybrid": layer_GoogleHybrid_0,}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
